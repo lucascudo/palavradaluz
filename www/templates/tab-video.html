@@ -1,0 +1,17 @@
+<ion-view view-title="{{ pageTitle }}">
+<ion-content>
+	
+    <div class="list card" ng-repeat="video in videos">
+	  <a href="#" ng-click="goOutside('https://www.youtube.com/watch?v={{ video.id.videoId }}')" style="text-decoration: none;">
+          <div class="item item-text-wrap">
+            <h2>{{video.snippet.title}}</h2>
+            <p><i class="ion ion-ios-calendar-outline"></i> {{video.snippet.publishedAt | limitTo: 10}}</p>
+          </div>
+          <div class="item item-image">
+            <img src="{{ video.snippet.thumbnails.default.url }}">
+          </div>
+      </a>
+	</div>
+    
+  </ion-content>
+</ion-view>

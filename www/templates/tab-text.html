@@ -1,0 +1,15 @@
+<ion-view view-title="Evangelho Escrito">
+    <ion-content class="padding">
+	   <div class="item item-text-wrap">
+        <blockquote>"{{ message.text }}"</blockquote>
+		<small>{{ message.author }}</small>
+       </div>
+        <br>
+       <div>
+           <h3>Livros disponíveis para download:</h3>
+           <ul>
+            <li ng-repeat="ebook in ebooks"><p><a href="#" ng-click="goOutside(ebook.url)">- {{ ebook.title }}</a></p></li>
+           </ul>
+       </div>
+	</ion-content>
+</ion-view>
