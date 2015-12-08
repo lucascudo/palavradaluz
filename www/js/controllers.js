@@ -38,7 +38,7 @@ angular.module('starter.controllers', [])
     
     YoutubeFactory.getChannelVideos({
       type: 'video',
-      maxResults: '10',
+      maxResults: '5',
       part: 'id,snippet',
       order: 'date',
       channelId: $state.$current.data.channelId,
