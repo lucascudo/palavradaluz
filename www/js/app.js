@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
+angular.module('starter', ['ionic', 'ionic-material', 'starter.controllers', 'starter.services'])
 
 .run(function($ionicPlatform, $rootScope) {
   $rootScope.goOutside = function (url, target) {
@@ -45,9 +45,19 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
   // Each tab has its own nav history stack:
 
+  .state('tab.message', {
+    url: '/message',
+    cache: false,
+    views: {
+      'tab-message': {
+        templateUrl: 'templates/tab-message.html',
+        controller: 'MessageCtrl'
+      }
+    }
+  })
+
   .state('tab.text', {
     url: '/text',
-    cache: false,
     views: {
       'tab-text': {
         templateUrl: 'templates/tab-text.html',
@@ -79,6 +89,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/text');
+  $urlRouterProvider.otherwise('/tab/message');
 
 });

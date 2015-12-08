@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="br.com.palavrasdaluz" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="br.com.palavrasdaluz" version="0.1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>Palavras da Luz</name>
   <description>
-        Entretenimento espírita.
-    </description>
+    Entretenimento espírita.
+  </description>
   <author email="lucas.sisau@gmail.com" href="http://github.com/lucascudo/">
-      Lucas Teixeira Rocha (Cascudo)
-    </author>
+    Lucas Teixeira Rocha (Cascudo)
+  </author>
   <content src="index.html"/>
   <access origin="*"/>
   <preference name="webviewbounce" value="false"/>
