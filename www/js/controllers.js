@@ -4,22 +4,26 @@ function VideoCtrl() {
 
 angular.module('starter.controllers', [])
 
-.controller('TextCtrl', function ($ionicLoading, $rootScope, $scope, ionicMaterialInk, ionicMaterialMotion, BooksFactory) {
+.controller('TextCtrl', function ($ionicLoading, $rootScope, $scope, ionicMaterialInk, ionicMaterialMotion, BookFactory) {
     ionicMaterialInk.displayEffect();
     ionicMaterialMotion.ripple();
     $ionicLoading.show();
-    $scope.ebooks = BooksFactory.getEbooks();
+    $scope.ebooks = BookFactory.getEbooks();
     $ionicLoading.hide();
 })
-.controller('MessageCtrl', function ($ionicLoading, $scope, ionicMaterialInk, ionicMaterialMotion) {
-    ionicMaterialInk.displayEffect();
-    ionicMaterialMotion.ripple();
-    $ionicLoading.show();
-    $scope.message = {
-        text: 'Ainda não possuímos mensagens personalizadas =(',
-        author: 'ROCHA, Lucas T.'
-    };
-    $ionicLoading.hide();
+.controller('MessageCtrl', function ($ionicLoading, $scope, ionicMaterialInk, ionicMaterialMotion, MessageFactory) {
+  $scope.refreshPage = function refreshPage() {
+    var mfCopy = MessageFactory.slice();
+    $scope.message = mfCopy.sort(function randomize() {
+      return (Math.round(Math.random())-0.5);
+    }).pop();
+    console.log($scope.message);
+  };
+  ionicMaterialInk.displayEffect();
+  ionicMaterialMotion.ripple();
+  $ionicLoading.show();
+  $scope.refreshPage();
+  $ionicLoading.hide();
 })
 .controller('VideoCtrl', function($ionicLoading, $http, $rootScope, $scope, $state, ionicMaterialInk, ionicMaterialMotion, YoutubeFactory){
     ionicMaterialInk.displayEffect();

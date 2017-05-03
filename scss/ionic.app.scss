@@ -25,3 +25,25 @@ blockquote {
 	font-style: italic;
 	border-color: $energized;
 }
+
+//tab-message
+.rounded-button {
+	display: block;
+	margin: auto;
+    border: 2px solid #f5f5f5;
+    border-radius: 50%;
+    color: #f5f5f5;
+    text-align: center;
+    background: $energized;
+    font-weight: bold;
+    line-height: 50px;
+    box-shadow: 0 0 3px gray;
+}
+.rounded-button:hover {
+    opacity: 0.80;
+}
+.btn-refresh {
+    width: 69px;
+    height: 69px;
+    font-size: 66px;
+}
