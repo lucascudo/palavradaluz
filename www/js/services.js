@@ -1,7 +1,7 @@
 angular.module('starter.services', [])
 
-.factory('BooksFactory', function () {
-    ebooksUrl = "http://www.sisau.com.br/espiritismoemebook/";
+.factory('BookFactory', function () {
+    var ebooksUrl = "http://www.lucascudo.com.br/palavrasdaluz/";
     return {
 	    getEbooks: function () {
 	    	return [
@@ -25,10 +25,36 @@ angular.module('starter.services', [])
 	    }
 	}
 })
+.factory('MessageFactory', function () {
+	return [
+		{
+			author: 'Humberto Gessinger',
+			text:
+				'Toda vez que falta luz.\n\
+				Toda vez que algo nos falta.\n\
+				O invisível nos salta aos olhos.\n\
+				Um salto no escuro, da piscina.\n\
+				\n\
+				O fogo ilumina muito, por muito pouco tempo.\n\
+				Em muito pouco tempo, o fogo apaga tudo, tudo um dia vira luz.\n\
+				Toda vez que falta luz.\n\
+				O invisível nos salta aos olhos.'
+		},
+		{
+			author: 'Chico Xavier',
+			text:
+				'Cada pessoa é aquilo que crê; \n\
+				fala do que gosta; \n\
+				retém o que procura; \n\
+				ensina o que aprende; \n\
+				tem o que dá e vale o que faz.'
+		}
+	];
+})
 .factory('YoutubeFactory', function ($http) {
     return {
         getChannelVideos: function (youtubeParams) {
-            youtubeParams.key = 'AIzaSyDa2nNiaFBE-4xGAN5txtR03-T6FwuJGn8';
+            youtubeParams.key = '';
             return $http.get('https://www.googleapis.com/youtube/v3/search', {params: youtubeParams});
         }   
     };
