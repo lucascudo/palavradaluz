@@ -1,0 +1,30 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "br.com.palavrasdaluz"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "br.com.palavrasdaluz"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "br.com.palavrasdaluz"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "br.com.palavrasdaluz"
+    },
+    "ionic-plugin-keyboard": {
+      "PACKAGE_NAME": "br.com.palavrasdaluz"
+    },
+    "org.apache.cordova.inappbrowser": {
+      "PACKAGE_NAME": "br.com.palavrasdaluz"
+    }
+  },
+  "dependent_plugins": {}
+}
